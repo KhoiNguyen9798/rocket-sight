@@ -61,7 +61,28 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Custom space theme colors
+				'rocket-orange': 'hsl(var(--rocket-orange))',
+				'feasible-green': 'hsl(var(--feasible-green))',
+				'infeasible-red': 'hsl(var(--infeasible-red))',
+				'stellar-blue': 'hsl(var(--stellar-blue))',
+				'cosmic-purple': 'hsl(var(--cosmic-purple))',
+				'space-gray': 'hsl(var(--space-gray))'
+			},
+			backgroundImage: {
+				'cosmic': 'var(--gradient-cosmic)',
+				'rocket': 'var(--gradient-rocket)',
+				'space': 'var(--gradient-space)'
+			},
+			boxShadow: {
+				'cosmic': 'var(--shadow-cosmic)',
+				'stellar': 'var(--shadow-stellar)',
+				'glow-rocket': 'var(--glow-rocket)'
+			},
+			transitionTimingFunction: {
+				'smooth': 'var(--transition-smooth)',
+				'bounce': 'var(--transition-bounce)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
