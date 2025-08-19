@@ -388,9 +388,13 @@ const RocketVisualization: React.FC = () => {
           }}
         >
           <img
-            src={`/sprites/default_rocket.svg`}
-            alt="Rocket sprite"
+            src={`/sprites/rocket_${tooltip.object.id}.svg`}
+            alt={`Rocket ${tooltip.object.id} sprite`}
             className="w-32 h-32 object-contain mb-2 bg-muted rounded border"
+            onError={(e) => {
+              // Fallback to default sprite if specific sprite doesn't exist
+              e.currentTarget.src = '/sprites/default_rocket.svg';
+            }}
           />
           <div className="space-y-1 text-sm">
             <div><strong>ID:</strong> {tooltip.object.id}</div>
@@ -451,9 +455,13 @@ const RocketVisualization: React.FC = () => {
                         }`}
                       />
                       <img
-                        src={`/sprites/default_rocket.svg`}
-                        alt="Rocket"
+                        src={`/sprites/rocket_${item.id}.svg`}
+                        alt={`Rocket ${item.id}`}
                         className="w-16 h-16 object-contain bg-background rounded border"
+                        onError={(e) => {
+                          // Fallback to default sprite if specific sprite doesn't exist
+                          e.currentTarget.src = '/sprites/default_rocket.svg';
+                        }}
                       />
                       <div className="flex-1 min-w-0">
                         <div className="font-medium text-sm truncate">ID: {item.id}</div>
